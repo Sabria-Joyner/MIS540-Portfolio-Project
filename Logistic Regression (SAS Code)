@@ -1,0 +1,4 @@
+proc logistic data=capstone.hr_attrition plots=all;
+    class Attrition(ref='No') BusinessTravel Department EducationField Gender JobRole MaritalStatus OverTime / param=ref;
+    model Attrition(event='Yes') = Age MonthlyIncome JobSatisfaction YearsAtCompany OverTime JobLevel DistanceFromHome;
+run;
