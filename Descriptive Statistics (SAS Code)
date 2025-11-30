@@ -1,0 +1,6 @@
+proc means data=capstone.hr_attrition n mean median std min max;
+run;
+
+proc freq data=capstone.hr_attrition;
+    tables Attrition Department JobRole Education Gender OverTime;
+run;
